@@ -32,11 +32,9 @@ export const getOne=(req, res)=>{
 
 
     export const updateOne = (req, res) => {
-        productDao
-          .updateOne(req.params.barcode, req.body)
-          .then((products) => {
-            !products
-              ? res.console({
+        productDao.updateOne(req.params.barcode, req.body)
+          .then((product) => {
+            !product ? res.console({
                   message: "product not found",
                 })
               : res.redirect('/api/products/');
