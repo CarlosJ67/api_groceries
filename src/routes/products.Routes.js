@@ -6,7 +6,7 @@ const router=Router();
 router.get('/', getAll);
 router.get('/:barcode', getOne);
 router.post('/', insertOne);
-router.put('/:barcode', updateOne);
+router.post('/:barcode', updateOne);
 router.get('/delete/:barcode', deleteOne);
 
 //aqui lleva la funcion que va a tener el procesamiento
