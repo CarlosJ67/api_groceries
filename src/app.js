@@ -12,5 +12,5 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(morgan('dev'));//en tiempo de dasarrolo , cuando se hostea se pone en mode produccion
-app.use('/api/products', productsRouter);
+app.use(productsRouter);
 export default app;
