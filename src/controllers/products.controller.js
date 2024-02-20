@@ -22,7 +22,7 @@ export const getOne = (req, res) => {
 
 export const insertOne = (req, res) => {
     productDao.insertOne(req.body)
-        .then(result => res.json({ message: "Insertion successful" }))
+        .then(result => res.json({ message: "Product insert" }))
         .catch(err => res.json({ status: "Server unavailable" }));
 };
 
@@ -31,7 +31,7 @@ export const updateOne = (req, res) => {
         .then((product) => {
             !product ? res.json({
                 message: "Product not found :/"
-            }) : res.json({ message: "Update successful" });
+            }) : res.json({ message: "Product update" });
         })
         .catch((err) => res.json({ status: "Server unavailable" }));
 };
@@ -41,7 +41,7 @@ export const deleteOne = (req, res) => {
         .then(product => {
             !product ? res.json({
                 message: "Product not found :/"
-            }) : res.json({ message: "Deletion successful" });
+            }) : res.json({ message: "Product delete" });
         })
         .catch(err => res.json({ status: "Server unavailable" }));
 };
